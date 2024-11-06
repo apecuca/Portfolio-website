@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Potfolio-website/static/css/main.4be5428e.css",
+    "main.js": "/Potfolio-website/static/js/main.b7d923fb.js",
+    "static/js/453.1407b060.chunk.js": "/Potfolio-website/static/js/453.1407b060.chunk.js",
+    "index.html": "/Potfolio-website/index.html",
+    "main.4be5428e.css.map": "/Potfolio-website/static/css/main.4be5428e.css.map",
+    "main.b7d923fb.js.map": "/Potfolio-website/static/js/main.b7d923fb.js.map",
+    "453.1407b060.chunk.js.map": "/Potfolio-website/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4be5428e.css",
+    "static/js/main.b7d923fb.js"
+  ]
+}
