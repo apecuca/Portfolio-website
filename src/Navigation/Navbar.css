@@ -1,0 +1,104 @@
+:root
+{
+    --navabar-side-padding: 5em;
+}
+
+.Navbar
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: calc(100% - calc(var(--navabar-side-padding) * 2));
+    height: 5em;
+
+    overflow: hidden;
+    display: flex;
+    
+    background-color: #333;
+    padding: 0.5em;
+    padding-left: var(--navabar-side-padding);
+    padding-right: var(--navabar-side-padding);
+}
+
+.Navbar-left
+{
+    height: 100%;
+    width: fit-content;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar-right
+{
+    height: 100%;
+    width: 100%;
+    
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+    
+    display: flex;
+    justify-content: end;
+}
+
+.Navbar img
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar p
+{
+    display: inline-block;
+    align-content: center;
+
+    margin: 0;
+    padding: 0;
+    
+    color: white;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.Navbar button
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    background-color: transparent;
+    color: white;
+    border: none;
+
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.Navbar button:hover
+{
+    animation: wiggle 2s infinite;
+}
+
+@keyframes wiggle {
+    33% {transform: rotate(-10deg);}
+    66% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+.test
+{
+    width: calc(100% - 2em);
+    height: 800px;
+    background-color: #777777;
+    margin: 1em;
+
+    scroll-margin-top: 7em;
+}

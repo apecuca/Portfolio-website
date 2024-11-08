@@ -1,11 +1,13 @@
 //import logo from './logo.svg';
 import './App.css';
 
+import Navbar from './Navigation/Navbar';
+
 function App()
 {
   return (
     <div className='appBody' id='appBody'>
-      <h1>Hello world!</h1>
+      <Navbar />
     </div>
   );
 }
