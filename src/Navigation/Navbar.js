@@ -1,17 +1,60 @@
 import './Navbar.css'
 
 import logo from "../logo.svg";
+import { useEffect } from 'react';
 
 function GoToSection(id)
-    {
-        const element = document.getElementById(id);
-        element?.scrollIntoView({
-            behavior: 'smooth'
-        });
-    }
+{
+    const element = document.getElementById(id);
+    element?.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
 function Navbar()
 {
+    // Variables
+    var lastScroll;
+    var navbarElement;
+
+    // Listeners
+    useEffect(() => {
+        window.addEventListener('scroll', ControlNavbar);
+
+        return () => {
+            window.removeEventListener('scroll', ControlNavbar);
+        };
+    });
+
+    // Control navbar
+    function ControlNavbar()
+    {
+        if (!navbarElement)
+            navbarElement = document.getElementById('Navbar')
+
+        var newScrollVl = lastScroll - window.scrollY;
+
+        if (newScrollVl < 0)
+        {
+            // Descendo
+            if (parseInt(navbarElement.style.top) + newScrollVl > -navbarElement.clientHeight)
+                navbarElement.style.top = (parseInt(navbarElement.style.top) + newScrollVl) + "px";
+            else
+                navbarElement.style.top = -navbarElement.clientHeight + "px";
+        }
+        else
+        {
+            // Subindo
+            if (parseInt(navbarElement.style.top) + newScrollVl < 0)
+                navbarElement.style.top = (parseInt(navbarElement.style.top) + newScrollVl) + "px";
+            else
+                navbarElement.style.top = "0px";
+        }
+
+        lastScroll = window.scrollY;
+    }
+
+    // HTML return
     return (
     <>
         <div className='Navbar' id='Navbar'>
@@ -23,12 +66,9 @@ function Navbar()
                 <button onClick={(e) => GoToSection('AboutSection', e)}>Sobre</button>
                 <button onClick={(e) => GoToSection('ProjectsSection', e)}>Projetos</button>
                 <button onClick={(e) => GoToSection('ContactSection', e)}>Contato</button>
-                <a href='/'><img src={logo} alt='logo'/></a>
+                <button onClick={(e) => GoToSection('AboutSection', e)} style={{paddingRight: '0px'}}><img src={logo} alt='logo'/></button>
             </div>
         </div>
-        <div id='AboutSection' className='test' style={{marginTop: '7.25em'}}></div>
-        <div id='ProjectsSection'className='test'></div>
-        <div id='ContactSection' className='test'><img src={logo} alt='logo' height={400}/></div>
     </>
     );
 }

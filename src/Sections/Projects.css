@@ -1,0 +1,9 @@
+.ProjectsSection
+{
+    width: calc(100% - 2em);
+    height: 800px;
+    background-color: #777777;
+    margin: 1em;
+
+    scroll-margin-top: 7em;
+}
