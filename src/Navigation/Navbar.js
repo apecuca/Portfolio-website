@@ -13,7 +13,7 @@ function GoToSection(id)
 
 function Navbar()
 {
-    // Variables
+    // Scroll control variables
     var lastScroll;
     var navbarElement;
 
@@ -29,28 +29,23 @@ function Navbar()
     // Control navbar
     function ControlNavbar()
     {
+        // Navbar setting, in case it's not yet set
+        // Happens on the first time this function is called
         if (!navbarElement)
-            navbarElement = document.getElementById('Navbar')
-
-        var newScrollVl = lastScroll - window.scrollY;
-
-        if (newScrollVl < 0)
         {
-            // Descendo
-            if (parseInt(navbarElement.style.top) + newScrollVl > -navbarElement.clientHeight)
-                navbarElement.style.top = (parseInt(navbarElement.style.top) + newScrollVl) + "px";
-            else
-                navbarElement.style.top = -navbarElement.clientHeight + "px";
-        }
-        else
-        {
-            // Subindo
-            if (parseInt(navbarElement.style.top) + newScrollVl < 0)
-                navbarElement.style.top = (parseInt(navbarElement.style.top) + newScrollVl) + "px";
-            else
-                navbarElement.style.top = "0px";
+            navbarElement = document.getElementById('Navbar');
+            navbarElement.style.top = "0px";
         }
 
+        // Scroll control variables
+        var scrollDiff = lastScroll - window.scrollY;
+        var navbarTop = parseFloat(navbarElement.style.top);
+
+        // Clamp value between min and max and update navbar top
+        // Math.min(Math.max(CURRENT VALUE, MIN), MAX)
+        navbarElement.style.top = Math.min(Math.max(navbarTop + scrollDiff, -navbarElement.clientHeight), 0) + "px";
+
+        // Update variables
         lastScroll = window.scrollY;
     }
 
