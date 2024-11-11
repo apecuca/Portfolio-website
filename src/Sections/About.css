@@ -1,9 +1,97 @@
+:root
+{
+    --aboutSection-sidePadding: clamp(1em, 12em, 30em);
+}
+
 .AboutSection
 {
-    width: calc(100% - 2em);
-    height: 800px;
-    background-color: #777777;
-    margin: 1em;
+    width: calc(100% - (var(--aboutSection-sidePadding) * 2));
+    height: fit-content;
 
-    scroll-margin-top: 7em;
+    margin: 0;
+    padding-bottom: 2em;
+    padding-left: var(--aboutSection-sidePadding);
+    padding-right: var(--aboutSection-sidePadding);
+    padding-top: 8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../Images/AboutBackground.png');
+    background-size: auto;
+    background-repeat: repeat;
+
+    overflow: hidden;
+}
+
+.AboutSection-content
+{
+    min-width: 35em;
+    max-width: 50em;
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3em;
+    
+    background-color: rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(2px);
+}
+
+.AboutSection-textBox
+{
+    text-align: justify;
+    text-align-last: center;
+}
+
+.AboutSection-content img
+{
+    height: 20em;
+    padding: 0;
+    margin: 0;
+}
+
+.AboutSection-content img:hover
+{
+    animation: wiggle 4s infinite;
+}
+
+.AboutSection-technologies
+{
+    min-width: 20em;
+    max-width: 40em;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 3em;
+    
+    background-color: rgba(255, 255, 255, 0.288);
+    backdrop-filter: blur(2px);
+
+    border-top-style: ridge;
+    border-color: red;
+}
+
+.AboutSection-technologies img
+{
+    height: 5em;
+    width: auto;
+    scale: 1;
+}
+
+.AboutSection-technologies img:hover
+{
+    animation: increaseImageSize 0.5s;
+    scale: 1.25;
+}
+
+@keyframes increaseImageSize
+{
+    from {scale: 1;}
+    to {scale: 1.25;}
 }

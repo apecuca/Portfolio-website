@@ -1,6 +1,6 @@
 import './Navbar.css'
 
-import logo from "../logo.svg";
+import logo from "../Images/Logo.png";
 import { useEffect } from 'react';
 
 function GoToSection(id)
@@ -55,13 +55,14 @@ function Navbar()
         <div className='Navbar' id='Navbar'>
             <div className='Navbar-left'>
                 <img src={logo} alt='logo' />
-                <p>Marco Bossle Villanova</p>
+                <p>MARCO BOSSLE VILLANOVA</p>
             </div>
             <div className='Navbar-right'>
-                <button onClick={(e) => GoToSection('AboutSection', e)}>Sobre</button>
-                <button onClick={(e) => GoToSection('ProjectsSection', e)}>Projetos</button>
-                <button onClick={(e) => GoToSection('ContactSection', e)}>Contato</button>
-                <button onClick={(e) => GoToSection('AboutSection', e)} style={{paddingRight: '0px'}}><img src={logo} alt='logo'/></button>
+                <button onClick={(e) => GoToSection('AboutSection', e)}>ABOUT</button>
+                <p>|</p>
+                <button onClick={(e) => GoToSection('ProjectsSection', e)}>PROJECTS</button>
+                <p>|</p>
+                <button onClick={(e) => GoToSection('ContactSection', e)}>CONTACT</button>
             </div>
         </div>
     </>
