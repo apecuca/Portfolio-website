@@ -1,9 +1,120 @@
 .ProjectsSection
 {
-    width: calc(100% - 2em);
-    height: 800px;
-    background-color: #777777;
-    margin: 1em;
+    width: 100%;
+    height: fit-content;
+    
+    margin: 0;
+    padding: 0;
+    /*padding-bottom: 2em;*/
 
     scroll-margin-top: 7em;
+
+    background-color: rgb(205, 38, 35);
+
+    border-top-style: ridge;
+    border-color: rgb(205, 38, 35);
+}
+
+.FeaturedProjects
+{
+    width: 100%;
+    height: 50em;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+.carroussel-project
+{
+    min-height: 100%;
+    width: auto;
+
+    flex-shrink: 0;
+    object-fit: cover;
+
+    display: none;
+
+    padding: 0;
+    margin: 0;
+
+    background-size: auto clamp(2em, 100%, 100em);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carroussel-active
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+.carroussel-content
+{
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 5em;
+}
+
+.carroussel-content > button
+{
+    height: 4em;
+    width: 15em;
+
+    margin: 0;
+    margin-right: 2em;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 1em;
+
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.carroussel-content > p
+{
+    color: white;
+    font-weight: bold;
+}
+
+.carroussel-prev, .carroussel-next
+{
+    height: 2em;
+    width: 1.5em;
+
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+    border: none;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+
+    transition: 0.15s;
+}
+
+.carroussel-next
+{
+    right: 0;
+}
+
+.carroussel-prev:hover, .carroussel-next:hover
+{
+    background-color: rgba(0, 0, 0, 0.25);
 }
