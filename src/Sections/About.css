@@ -74,7 +74,7 @@
     backdrop-filter: blur(2px);
 
     border-top-style: ridge;
-    border-color: red;
+    border-color: rgb(205, 38, 35);
 }
 
 .AboutSection-technologies img
@@ -82,16 +82,10 @@
     height: 5em;
     width: auto;
     scale: 1;
+    transition: 0.25s;
 }
 
 .AboutSection-technologies img:hover
 {
-    animation: increaseImageSize 0.5s;
-    scale: 1.25;
-}
-
-@keyframes increaseImageSize
-{
-    from {scale: 1;}
-    to {scale: 1.25;}
+    scale: 1.2;
 }
