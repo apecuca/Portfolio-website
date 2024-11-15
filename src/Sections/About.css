@@ -1,17 +1,12 @@
-:root
-{
-    --aboutSection-sidePadding: clamp(1em, 12em, 30em);
-}
-
 .AboutSection
 {
-    width: calc(100% - (var(--aboutSection-sidePadding) * 2));
+    width: 100%;
     height: fit-content;
 
     margin: 0;
     padding-bottom: 2em;
-    padding-left: var(--aboutSection-sidePadding);
-    padding-right: var(--aboutSection-sidePadding);
+    padding-left: 1em;
+    padding-right: 1em;
     padding-top: 8em;
 
     display: flex;
@@ -56,6 +51,12 @@
     margin: 0;
 }
 
+.AboutSection-content p
+{
+    color: black;
+    font-weight: normal;
+}
+
 .AboutSection-content img:hover
 {
     animation: wiggle 4s infinite;
@@ -68,7 +69,7 @@
     width: fit-content;
     height: fit-content;
 
-    padding: 3em;
+    padding: 1em;
     
     background-color: rgba(255, 255, 255, 0.288);
     backdrop-filter: blur(2px);
