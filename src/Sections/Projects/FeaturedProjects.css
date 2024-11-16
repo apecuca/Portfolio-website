@@ -11,8 +11,10 @@
 
     background-color: rgb(205, 38, 35);
 
+    /*
     border-top-style: ridge;
     border-color: rgb(205, 38, 35);
+    */
 }
 
 .featured-projects
@@ -49,20 +51,34 @@
 
 .carousel-caption
 {
+    left: 0;
+    right: 0;
+    height: fit-content;
+
+    padding-bottom: 3em;
+}
+
+.carousel-caption-content
+{
+    width: fit-content;
+    min-width: 10em;
+    max-width: 50em;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    left: 25%;
-    right: 25%;
+    margin: 0;
+    padding: 0;
+    padding-right: 1em;
+    padding-left: 1em;
 
-    padding-bottom: 3em;
 
     text-align: justify;
     text-align-last: left;
 }
 
-.carousel-caption > p
+.carousel-caption-content > p
 {
     padding: 0;
     margin: 0;
@@ -72,7 +88,7 @@
     font-size: 1em;
 }
 
-.carousel-caption > button
+.carousel-caption-content > button
 {
     margin-right: 1em;
     padding: 3em;
@@ -89,12 +105,12 @@
     border-radius: 0.5em;
     outline: transparent solid 0.2em;
 
-    transition: 0.1s linear;
+    transition: 0.05s linear;
 }
 
-.carousel-caption > button:hover
+.carousel-caption-content > button:hover
 {
-    outline: red solid 0.2em;
+    outline: rgb(205, 38, 35) solid 0.15em;
 }
 
 .carousel-control-next, .carousel-control-prev
@@ -118,24 +134,3 @@
 
     border-radius: 100%;
 }
-
-.project-gallery
-{
-    width: 100%;
-    height: fit-content;
-
-    display: flex;
-    justify-content: center;
-
-    padding-top: 2em;
-    padding-bottom: 2em;
-
-    background-color: rgb(205, 38, 35);
-}
-
-.project-gallery > h2, p
-{
-    color: white;
-    font-weight: bold;
-}
-
