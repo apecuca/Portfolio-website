@@ -100,7 +100,7 @@
 
     color: white;
     font-weight: bold;
-    background-color: rgba(205, 38, 35, 1);
+    background-color: var(--c-blue);
 }
 
 .gallery-item-content-description

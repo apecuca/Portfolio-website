@@ -95,9 +95,9 @@
 
 @keyframes wiggle {
     16% {transform: rotate(-10deg); color: white;}
-    32% {transform: rotate(10deg); color: rgb(255, 191, 191);}
+    32% {transform: rotate(10deg); color: var(--c-blue-light);}
     48% {transform: rotate(0deg);}
-    64% {transform: rotate(-10deg); color: rgb(255, 191, 191);}
+    64% {transform: rotate(-10deg); color: var(--c-blue-light);}
     80% {transform: rotate(10deg); color: white;}
     100% {transform: rotate(0deg);}
 }

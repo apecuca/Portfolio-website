@@ -1,3 +1,10 @@
+:root
+{
+  --c-blue: #0088f0;
+  --c-blue-light: #81c8ff;
+  --c-red: rgb(205, 38, 35);
+}
+
 .appBody
 {
   text-align: center;

@@ -9,7 +9,7 @@
 
     scroll-margin-top: 7em;
 
-    background-color: rgb(205, 38, 35);
+    background-color: var(--c-red);
 
     /*
     border-top-style: ridge;
@@ -95,7 +95,7 @@
     padding-top: 0.75em;
     padding-bottom: 0.75em;
 
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--c-blue);
 
     font-weight: bold;
     color: white;
@@ -110,7 +110,7 @@
 
 .carousel-caption-content > button:hover
 {
-    outline: rgb(205, 38, 35) solid 0.15em;
+    outline: var(--c-blue-light) solid 0.15em;
 }
 
 .carousel-control-next, .carousel-control-prev
