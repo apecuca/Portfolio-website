@@ -14,7 +14,7 @@
 
 .project-gallery > h2
 {
-    color: white;
+    color: var(--c-red);
     font-weight: bold;
 }
 
@@ -43,6 +43,7 @@
     margin: 1em;
 
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0.2em 2em 0.3em rgba(0, 0, 0, 0.1);
     border-radius: 1em;
 
     overflow: hidden;
