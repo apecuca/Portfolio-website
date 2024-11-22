@@ -4,34 +4,6 @@ import logo from "../Images/Logo.png";
 import hamburger_icon from '../Images/hamburger_icon.png'
 import { useEffect } from 'react';
 
-function GoToSection(id)
-{
-    const element = document.getElementById(id);
-    element?.scrollIntoView({
-        behavior: 'smooth'
-    });
-
-    if (document.getElementById('HamburgerMenu').clientHeight !== 0)
-        onHamburgerClick();
-}
-
-function onHamburgerClick()
-{
-    const hamburgerImg = document.getElementById('HamburgerImg');
-    const hamburgerMenu = document.getElementById('HamburgerMenu');
-
-    if (hamburgerImg.classList.length === 0)
-    {
-        hamburgerImg.classList = 'hamburger-button-active';
-        hamburgerMenu.classList += ' hamburger-menu-active'
-    }
-    else
-    {
-        hamburgerImg.classList = '';
-        hamburgerMenu.classList = 'hamburger-menu';
-    }
-}
-
 function Navbar()
 {
     // Scroll control variables
@@ -74,6 +46,39 @@ function Navbar()
 
         // Update variables
         lastScroll = window.scrollY;
+    }
+
+    function GoToSection(id)
+    {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        if (document.getElementById('HamburgerMenu').clientHeight !== 0)
+            onHamburgerClick();
+    }
+
+    function onHamburgerClick()
+    {
+        const hamburgerImg = document.getElementById('HamburgerImg');
+        const hamburgerMenu = document.getElementById('HamburgerMenu');
+
+        // Update Navbar
+        ControlNavbarScroll();
+        navbarElement.style.top = "0px";
+        lastScroll = window.scrollY;
+
+        if (hamburgerImg.classList.length === 0)
+        {
+            hamburgerImg.classList = 'hamburger-button-active';
+            hamburgerMenu.classList += ' hamburger-menu-active'
+        }
+        else
+        {
+            hamburgerImg.classList = '';
+            hamburgerMenu.classList = 'hamburger-menu';
+        }
     }
 
     // HTML return

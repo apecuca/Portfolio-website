@@ -4,43 +4,21 @@
     height: fit-content;
 
     padding: 1em;
-    padding-top: 8em;
-    padding-bottom: 3em;
+    padding-top: 12em;
+    padding-bottom: 7em;
 
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-.about > img
-{
-    width: 30em;
-    height: auto;
-}
-
-.about > img:hover
-{
-    animation: wiggle 4s infinite;
-}
-
 .about-infobox
 {
     height: fit-content;
-    max-width: 30em;
+    max-width: 25em;
 
     text-align: justify;
     text-align-last: center;
-}
-
-.about-infobox > h1
-{
-    font-weight: bold;
-}
-
-.about-infobox > p
-{
-    color: var(--c-gray-light);
-    font-weight: bold;
 }
 
 .about-infobox-technologies
@@ -55,6 +33,28 @@
     padding: 0 1em 0 1em;
 }
 
+.about > img
+{
+    width: 30em;
+    height: auto;
+}
+
+.about > img:hover
+{
+    animation: wiggle 4s infinite;
+}
+
+.about-infobox > h1
+{
+    font-weight: bold;
+}
+
+.about-infobox > p
+{
+    color: var(--c-gray-light);
+    font-weight: bold;
+}
+
 .about-infobox-technologies > img
 {
     height: 4em;
@@ -63,12 +63,20 @@
     transition: 0.25s;
 }
 
+.about-infobox-technologies img:hover
+{
+    scale: 1.2;
+}
+
 @media only screen and (orientation: portrait)
 {
     .about
     {
         display: flex;
         flex-direction: column-reverse;
+
+        padding-top: 8em;
+        padding-bottom: 3em;
     }
 
     .about > img
