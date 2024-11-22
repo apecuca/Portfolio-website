@@ -1,6 +1,7 @@
 import './Navbar.css'
 
 import logo from "../Images/Logo.png";
+import hamburger_icon from '../Images/hamburger_icon.png'
 import { useEffect } from 'react';
 
 function GoToSection(id)
@@ -9,6 +10,26 @@ function GoToSection(id)
     element?.scrollIntoView({
         behavior: 'smooth'
     });
+
+    if (document.getElementById('HamburgerMenu').clientHeight !== 0)
+        onHamburgerClick();
+}
+
+function onHamburgerClick()
+{
+    const hamburgerImg = document.getElementById('HamburgerImg');
+    const hamburgerMenu = document.getElementById('HamburgerMenu');
+
+    if (hamburgerImg.classList.length === 0)
+    {
+        hamburgerImg.classList = 'hamburger-button-active';
+        hamburgerMenu.classList += ' hamburger-menu-active'
+    }
+    else
+    {
+        hamburgerImg.classList = '';
+        hamburgerMenu.classList = 'hamburger-menu';
+    }
 }
 
 function Navbar()
@@ -16,26 +37,32 @@ function Navbar()
     // Scroll control variables
     var lastScroll;
     var navbarElement;
+    var hamburgerMenu;
 
     // Listeners
     useEffect(() => {
-        window.addEventListener('scroll', ControlNavbar);
+        window.addEventListener('scroll', ControlNavbarScroll);
 
         return () => {
-            window.removeEventListener('scroll', ControlNavbar);
+            window.removeEventListener('scroll', ControlNavbarScroll);
         };
     });
 
     // Control navbar
-    function ControlNavbar()
+    function ControlNavbarScroll()
     {
         // Navbar setting, in case it's not yet set
         // Happens on the first time this function is called
-        if (!navbarElement)
+        if (!navbarElement || !hamburgerMenu)
         {
-            navbarElement = document.getElementById('Navbar');
+            navbarElement = document.getElementById('NavbarContainer');
+            hamburgerMenu = document.getElementById('HamburgerMenu');
             navbarElement.style.top = "0px";
         }
+
+        // Returns if the hamburger menu is active
+        if (parseInt(hamburgerMenu.clientHeight) !== 0)
+            return;
 
         // Scroll control variables
         var scrollDiff = lastScroll - window.scrollY;
@@ -53,16 +80,39 @@ function Navbar()
     return (
     <>
         <div className='Navbar' id='Navbar'>
-            <div className='Navbar-left'>
-                <img src={logo} alt='logo' />
-                <p>MARCO BOSSLE VILLANOVA</p>
+            <div className='navbar-container' id='NavbarContainer'>
+                <div className='Navbar-left'>
+                    <img src={logo} alt='logo' />
+                    <p>MARCO BOSSLE VILLANOVA</p>
+                </div>
+                <div className='Navbar-right'>
+                    <button onClick={(e) => GoToSection('AboutSection', e)}>ABOUT</button>
+                    <p>|</p>
+                    <button onClick={(e) => GoToSection('ProjectsSection', e)}>PROJECTS</button>
+                    <p>|</p>
+                    <button onClick={(e) => GoToSection('ContactSection', e)}>CONTACT</button>
+                </div>
+                <div className='Navbar-right-mobile'>
+                    <button>
+                        <img 
+                            src={hamburger_icon}
+                            id='HamburgerImg'
+                            onClick={(e) => onHamburgerClick()}
+                            alt='Hamburger menu button'
+                        />
+                    </button>
+                </div>
             </div>
-            <div className='Navbar-right'>
-                <button onClick={(e) => GoToSection('AboutSection', e)}>ABOUT</button>
-                <p>|</p>
-                <button onClick={(e) => GoToSection('ProjectsSection', e)}>PROJECTS</button>
-                <p>|</p>
-                <button onClick={(e) => GoToSection('ContactSection', e)}>CONTACT</button>
+            <div className='hamburger-menu' id='HamburgerMenu'>
+                <div className='hamburger-content'>
+                    <button onClick={(e) => GoToSection('AboutSection', e)}>ABOUT</button>
+                    <button onClick={(e) => GoToSection('ProjectsSection', e)}>PROJECTS</button>
+                    <button onClick={(e) => GoToSection('ContactSection', e)}>CONTACT</button>
+                    <img src={logo} alt='logo'/>
+                </div>
+                <div className='hamburger-footer'>
+
+                </div>
             </div>
         </div>
     </>

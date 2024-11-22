@@ -3,17 +3,12 @@
   --c-blue: #0088f0;
   --c-blue-light: #81c8ff;
   --c-red: rgb(205, 38, 35);
+  --c-red-light: rgb(231, 121, 120);
+  --c-red-dark: rgb(121, 18, 16);
+  --c-gray-light: rgb(152, 164, 176);
 }
 
 .appBody
 {
   text-align: center;
 }
-
-/*
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-*/

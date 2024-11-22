@@ -1,0 +1,153 @@
+/* BACKUP FOR ABOUT SECTION */
+/*
+            <div className='AboutSection-content'>
+                <div className='AboutSection-textBox'>
+                    <h1>Hi, I'm Marco!</h1>
+                    <LoremIpsum p={1}/>
+                    <div className='AboutSection-technologies'>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                        <img src={logo} alt='logo'/>
+                    </div>
+                </div>
+
+                <img src={logo} alt='Me!'/>
+            </div>
+            */
+
+.AboutSection
+{
+    width: 100%;
+    height: fit-content;
+
+    margin: 0;
+    padding-bottom: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /*
+    background-image: url('../Images/AboutBackground.png');
+    background-size: auto;
+    background-repeat: repeat;
+    */
+
+    overflow: hidden;
+}
+
+.AboutSection-content
+{
+    width: fit-content;
+    height: fit-content;
+    min-width: 35em;
+    max-width: 50em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    background-color: rgba(255, 255, 255, 0.288);
+    /*backdrop-filter: blur(2px);*/
+}
+
+.AboutSection-textBox
+{
+    text-align: justify;
+    text-align-last: center;
+}
+
+.AboutSection-textBox img
+{
+    height: 3em;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.AboutSection-textBox p, h1
+{
+    color: black;
+    font-weight: normal;
+}
+
+.AboutSection-textBox > h1
+{
+    font-weight: bold;
+}
+
+.AboutSection-content > img
+{
+    height: 10em;
+    width: auto;
+}
+
+.AboutSection-content img:hover
+{
+    animation: wiggle 4s infinite;
+}
+
+.AboutSection-technologies
+{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+
+    padding: 1em;
+}
+
+.AboutSection-technologies img
+{
+    height: 5em;
+    width: auto;
+    scale: 1;
+    transition: 0.25s;
+}
+
+.AboutSection-technologies img:hover
+{
+    scale: 1.2;
+}
+
+@media only screen and (orientation: portrait)
+{
+    .AboutSection-content
+    {
+        width: 100%;
+        height: fit-content;
+        min-width: 0;
+        max-width: 45em;
+
+        margin: 0;
+        padding: 0;
+
+        flex-direction: column-reverse;
+    }
+
+    .AboutSection-textBox
+    {
+        padding-bottom: 2em;
+    }
+
+    .AboutSection-technologies
+    {
+        padding: 0;
+        padding-top: 3em;
+    }
+}

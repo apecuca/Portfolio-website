@@ -12,7 +12,7 @@ function FeaturedProjects()
     <div className='featured-projects'>
         <Carousel>
             {/* ITEM ONE */}
-            <Carousel.Item interval={null}>
+            <Carousel.Item interval={99999}>
                 <img
                     className="d-block w-100" src={dinosBanner}
                     alt="Banner for the project called Dinos"
@@ -25,7 +25,7 @@ function FeaturedProjects()
             </Carousel.Item>
 
             {/* ITEM TWO */}
-            <Carousel.Item interval={null}>
+            <Carousel.Item interval={99999}>
                 <img
                     className="d-block w-100" src={exampleImg}
                     alt="Default project banner"
@@ -54,7 +54,7 @@ function ProjectGallery()
                     alt='Banner for the project called Dinos'
                 />
                 <div className='gallery-item-content'>
-                    <p>Dinos</p>
+                    <p className='gallery-item-content-title'>Dinos</p>
                     <p className='gallery-item-content-description'>
                         Dinos is a multiplayer clone of the famous offline browser game: chrome://dino.
                     </p>
@@ -68,7 +68,7 @@ function ProjectGallery()
                     alt='Default banner for an empty project container'
                 />
                 <div className='gallery-item-content'>
-                    <p>Example project item</p>
+                    <p className='gallery-item-content-title'>Example project item</p>
                     <p className='gallery-item-content-description'>
                         This is an example gallery item! Hello :)
                     </p>
@@ -78,13 +78,14 @@ function ProjectGallery()
 
             <div className='gallery-item'>
                 <div className='gallery-item-content'>
-                    <p>WIP Project</p>
+                    <p className='gallery-item-content-title'>WIP Project</p>
                     <p className='gallery-item-content-description'>
                         An example of a WIP project, without an image :O
                     </p>
                     <button>Learn More</button>
                 </div>
             </div>
+            
         </div>
     </div>
     );

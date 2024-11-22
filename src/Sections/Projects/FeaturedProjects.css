@@ -5,16 +5,10 @@
     
     margin: 0;
     padding: 0;
-    /*padding-bottom: 2em;*/
 
     scroll-margin-top: 7em;
 
     background-color: white;
-
-    /*
-    border-top-style: ridge;
-    border-color: rgb(205, 38, 35);
-    */
 }
 
 .featured-projects
@@ -25,6 +19,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    background-color: var(--c-red);
 }
 
 .slide
@@ -133,4 +129,39 @@
     margin-right: 0.3em;
 
     border-radius: 100%;
+}
+
+@media only screen and (orientation: portrait)
+{
+    .carousel-caption
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-caption-content
+    {
+        min-width: 0;
+        max-width: fit-content;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        text-align-last: center;
+    }
+
+    .carousel-caption-content > button
+    {
+        margin-top: 1em;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    .featured-projects
+    {
+        display: none;
+    }
 }
