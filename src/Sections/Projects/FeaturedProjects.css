@@ -25,7 +25,7 @@
 
 .slide
 {
-    width: clamp(20em, 100%, 125em);
+    width: clamp(20em, 100%, 110em);
     height: 50em;
 }
 
@@ -65,13 +65,13 @@
     align-items: center;
 
     margin: 0;
-    padding: 0;
-    padding-right: 1em;
-    padding-left: 1em;
-
+    padding: 1em;
 
     text-align: justify;
     text-align-last: left;
+
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .carousel-caption-content > p

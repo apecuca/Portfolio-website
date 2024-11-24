@@ -1,7 +1,7 @@
 .Navbar
 {
     position: fixed;
-    z-index: 99;
+    z-index: 98;
 
     width: 100%;
     height: 100%;
@@ -80,7 +80,7 @@
 
 .hamburger-button-active
 {
-    content: url('../Images/close_icon.png');
+    content: url('../Images/icons/close_icon.png');
     scale: 0.7;
 }
 

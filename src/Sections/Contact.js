@@ -1,12 +1,13 @@
 import './Contact.css'
 
 // Images
-import github_icon from '../Images/github_icon.png'
-import itchio_icon from '../Images/itchio_icon.png'
-import email_icon from '../Images/email_icon.png'
-import instagram_icon from '../Images/instagram_icon.png'
+import github_icon from '../Images/icons/github_icon.png'
+import itchio_icon from '../Images/icons/itchio_icon.png'
+import email_icon from '../Images/icons/email_icon.png'
+import phone_icon from '../Images/icons/phone_icon.png'
+import instagram_icon from '../Images/icons/instagram_icon.png'
 
-function OpenTab(url)
+export function OpenTab(url)
 {
     window.open(url, '_blank').focus();
 }
@@ -34,6 +35,11 @@ function Contact()
             <div className='contact-item' role="button" onClick={(e) => OpenTab('https://www.instagram.com/pac_marco/')}>
                 <img src={instagram_icon} alt='Instagram logo'/>
                 <div className='contact-item-content'><p>@pac_marco</p></div>
+            </div>
+
+            <div className='contact-item'>
+                <img src={phone_icon} alt='Phone logo'/>
+                <div className='contact-item-content'><p>+55 (48) 98835-2647</p></div>
             </div>
 
             <div className='contact-item'>

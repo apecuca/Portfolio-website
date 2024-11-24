@@ -4,7 +4,7 @@ import './About.css'
 import { LoremIpsum } from 'react-lorem-ipsum';
 
 // Images
-import logo from "../Images/Logo.png";
+import logo from "../Images/icons/Logo.png";
 
 function About()
 {
