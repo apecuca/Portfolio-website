@@ -1,19 +1,31 @@
 {
   "files": {
-    "main.css": "/Portfolio-website/static/css/main.5fb12142.css",
-    "main.js": "/Portfolio-website/static/js/main.2237fe0d.js",
+    "main.css": "/Portfolio-website/static/css/main.ea0d9ae7.css",
+    "main.js": "/Portfolio-website/static/js/main.2c536b16.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio-website/static/js/453.1407b060.chunk.js",
-    "static/media/exampleImg.jpg": "/Portfolio-website/static/media/exampleImg.d83da970693c92363676.jpg",
-    "static/media/Logo.png": "/Portfolio-website/static/media/Logo.a679795ba5da111158ef.png",
+    "static/media/mussagame_banner.jpg": "/Portfolio-website/static/media/mussagame_banner.ee59ba3712107bd4e395.jpg",
+    "static/media/MeDrawing.png": "/Portfolio-website/static/media/MeDrawing.ca86909751914136c87e.png",
+    "static/media/portfolio_banner.jpg": "/Portfolio-website/static/media/portfolio_banner.d23467291cbf2947f59d.jpg",
+    "static/media/plagueprototype_banner.jpg": "/Portfolio-website/static/media/plagueprototype_banner.f99f1a7c6ea471560e48.jpg",
+    "static/media/LUPEngine_banner.jpg": "/Portfolio-website/static/media/LUPEngine_banner.6c5ec9a160a38741dc35.jpg",
+    "static/media/cpp_icon.png": "/Portfolio-website/static/media/cpp_icon.053a898d752aef72651e.png",
+    "static/media/reactjs_icon.png": "/Portfolio-website/static/media/reactjs_icon.ac7759c8e096f73a4c95.png",
     "static/media/dinosBanner.png": "/Portfolio-website/static/media/dinosBanner.e922d91ec0edbad63eb4.png",
+    "static/media/opengl_icon.png": "/Portfolio-website/static/media/opengl_icon.68c68146046212093ba7.png",
+    "static/media/csharp_icon.png": "/Portfolio-website/static/media/csharp_icon.4a32f53d425c7ad4cb05.png",
     "static/media/instagram_icon.png": "/Portfolio-website/static/media/instagram_icon.edb90ecc706a7a25542b.png",
+    "static/media/phone_icon.png": "/Portfolio-website/static/media/phone_icon.fdd4b7007148bcf6ce48.png",
+    "static/media/html5_icon.png": "/Portfolio-website/static/media/html5_icon.45166b005ae53589d8a3.png",
+    "static/media/unity_icon.png": "/Portfolio-website/static/media/unity_icon.88b5bd030daf194bfec5.png",
+    "static/media/javascript_icon.png": "/Portfolio-website/static/media/javascript_icon.42aa3c78cd5eb5039349.png",
+    "static/media/css3_icon.png": "/Portfolio-website/static/media/css3_icon.5f9a6869e63d1ff69be3.png",
     "index.html": "/Portfolio-website/index.html",
-    "main.5fb12142.css.map": "/Portfolio-website/static/css/main.5fb12142.css.map",
-    "main.2237fe0d.js.map": "/Portfolio-website/static/js/main.2237fe0d.js.map",
+    "main.ea0d9ae7.css.map": "/Portfolio-website/static/css/main.ea0d9ae7.css.map",
+    "main.2c536b16.js.map": "/Portfolio-website/static/js/main.2c536b16.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio-website/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5fb12142.css",
-    "static/js/main.2237fe0d.js"
+    "static/css/main.ea0d9ae7.css",
+    "static/js/main.2c536b16.js"
   ]
 }
