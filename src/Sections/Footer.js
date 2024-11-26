@@ -4,8 +4,11 @@ function Footer()
 {
     return <>
     <div className='footer'>
-        <h2>Byebye!!</h2>
-        <p>See you next time ^-^</p>
+        <h3>Goodbye, see you next time!! ^-^</h3>
+        <p>
+            This website was fully development by me (Marco) using the React.js framework.<br/>
+            More info on the GitHub repository.
+        </p>
     </div>
     </>
 }

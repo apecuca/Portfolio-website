@@ -1,8 +1,8 @@
 
 # Portfolio Website
-Hello! My name's Marco and this is my personal website, a simple interactive portfolio made using HTML, CSS, Javascript and React Framwork.
+Hello! My name's Marco and this is my personal website, a simple static portfolio website made using HTML, CSS, Javascript and the React Framwork.
 
-The website is available [here](https://google.com).
+The website is available [here](https://apecuca.github.io/Portfolio-website/).
 
 
 ## About me

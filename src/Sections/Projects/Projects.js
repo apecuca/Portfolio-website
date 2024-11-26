@@ -37,7 +37,8 @@ function FeaturedProjects()
                 />
                 <Carousel.Caption> <div className='carousel-caption-content'>
                     <button onClick={() => OpenTab('https://github.com/apecuca/LUPEngine_v1')}>Learn More</button>
-                    <p>LUPEngine v1 is the first version of my own Game Engine, coded in C++ and OpenGL. This is an ongoing solo project.</p>
+                    <p>LUPEngine v1 is the first version of my own Game Engine, coded in C++ and OpenGL. 
+                        This is an ongoing solo project with the sole purpose of studying game engine development.</p>
                 </div> </Carousel.Caption>
             </Carousel.Item>
 
@@ -96,12 +97,14 @@ function Projects()
                 />
                 <GalleryItem
                     banner={LUPEngineBanner} title='LUPEngine v1'
-                    description="The first version of my own Game Engine, coded in C++ and OpenGL. This is an ongoing solo project."
+                    description="The first version of my own Game Engine, coded in C++ and OpenGL. 
+                        This is an ongoing solo project with the sole purpose of studying game engine development."
                     externalLink='https://github.com/apecuca/LUPEngine_v1'
                 />
                 <GalleryItem
                     banner={plagueBanner} title='Plague Prototype'
                     description="Prototype for Plague, a fast roguelite platformer with a dark story. I've participated as the only programmer in this project."
+                    externalLink='https://apecuca.itch.io/plague-prototype'
                 />
                 <GalleryItem
                     banner={portfolioBanner} title='This website!'

@@ -1,11 +1,33 @@
 .about
 {
-    width: 100%;
-    height: fit-content;
+    position: relative;
 
-    padding: 1em;
-    padding-top: 12em;
-    padding-bottom: 7em;
+    width: 100%;
+    height: 45em;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+.about-container
+{
+    position: relative;
+
+    width: 100%;
+    max-width: 100em;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 3em;
 
     display: inline-flex;
     justify-content: center;
@@ -14,11 +36,20 @@
 
 .about-infobox
 {
-    height: fit-content;
-    max-width: 25em;
+    height: 100%;
+    max-width: 22.8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding: 2em;
 
     text-align: justify;
-    text-align-last: center;
+    text-align-last: right;
+
+    background-color: var(--c-blue-light);
 }
 
 .about-infobox-technologies
@@ -28,39 +59,65 @@
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
 
-    padding: 0 1em 0 1em;
+    padding: 0;
 }
 
-.about > img
+.front-line
+{
+    position: absolute;
+    top: 6em;
+    left: -25em;
+
+    width: 50em;
+    height: 1.5em;
+
+    background-color: var(--c-salmon);
+}
+
+.front-line-bottom
+{
+    top: auto;
+    left: auto;
+
+    bottom: 1.5em;
+    right: -25em;
+}
+
+.about-container > img
 {
     width: 30em;
     height: auto;
+
+    margin: 0;
+    margin-left: 4em;
+
+    outline: solid 0 var(--c-red);
+    border-radius: 100%;
+    transition: 0.25s ease;
 }
 
-.about > img:hover
+.about-container > img:hover
 {
-    animation: wiggle 4s infinite;
+    outline: solid 0.5em var(--c-red);
 }
 
-.about-infobox > h1
+.about-infobox p, h1
 {
-    font-weight: bold;
-}
-
-.about-infobox > p
-{
-    color: var(--c-gray-light);
+    color: white;
     font-weight: bold;
 }
 
 .about-infobox-technologies > img
 {
-    height: 4em;
+    height: 2.5em;
     width: auto;
+
+    margin: 0.3em;
+
     scale: 1;
-    transition: 0.25s;
+    transition: 0.1s ease;
 }
 
 .about-infobox-technologies img:hover
@@ -72,15 +129,50 @@
 {
     .about
     {
-        display: flex;
-        flex-direction: column-reverse;
+        height: fit-content;
 
-        padding-top: 8em;
+        box-shadow: 0 1em 1.25em 0em rgba(0, 0, 0, 0.2);
+
         padding-bottom: 3em;
     }
 
-    .about > img
+    .about-container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+
+        height: fit-content;
+
+        padding: 0;
+        padding-top: 5em;
+    }
+
+    .about-infobox
+    {
+        height: fit-content;
+        width: 100%;
+        max-width: none;
+
+        justify-content: center;
+        align-items: normal;
+
+        text-align-last: center;
+    }
+
+    .about-infobox-technologies
+    {
+        justify-content: center;
+    }
+
+    .front-line
+    {
+        display: none;
+    }
+
+    .about-container > img
     {
         width: 15em;
+        
+        margin: 3em;
     }
 }

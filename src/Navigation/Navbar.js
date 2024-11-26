@@ -1,8 +1,14 @@
 import './Navbar.css'
 
-import logo from "../Images/icons/Logo.png";
-import hamburger_icon from '../Images/icons/hamburger_icon.png'
+// Funcs
 import { useEffect } from 'react';
+import { OpenTab } from '../Sections/Contact'
+
+// Icons
+import hamburger_icon from '../Images/icons/hamburger_icon.png'
+import github_icon from '../Images/icons/github_icon.png'
+import itchio_icon from '../Images/icons/itchio_icon.png'
+import instagram_icon from '../Images/icons/instagram_icon.png'
 
 // Scroll control variables
 var lastScroll;
@@ -51,23 +57,34 @@ function GoToSection(id)
 function onHamburgerClick()
 {
     const hamburgerImg = document.getElementById('HamburgerImg');
-    const hamburgerMenu = document.getElementById('HamburgerMenu');
 
     // Update Navbar
     ControlNavbarScroll();
     navbarElement.style.top = "0px";
     lastScroll = window.scrollY;
 
+    // Not the best approach
+    // If this object had classes that where added/removed by
+    // other script, this wouldn't work
     if (hamburgerImg.classList.length === 0)
     {
         hamburgerImg.classList = 'hamburger-button-active';
-        hamburgerMenu.classList += ' hamburger-menu-active'
+        hamburgerMenu.classList += ' hamburger-menu-active';
+        document.body.classList += ' disableScroll';
     }
     else
     {
         hamburgerImg.classList = '';
         hamburgerMenu.classList = 'hamburger-menu';
+        document.body.classList = '';
     }
+}
+
+function onWindowResize()
+{
+    // This is TERRIBLE, but works on the current scope hehe
+    if (document.body.clientWidth > 950 && document.body.classList.length !== 0)
+        onHamburgerClick();
 }
 
 function Navbar()
@@ -75,9 +92,11 @@ function Navbar()
     // Listeners
     useEffect(() => {
         window.addEventListener('scroll', ControlNavbarScroll);
+        window.addEventListener('resize', onWindowResize);
 
         return () => {
             window.removeEventListener('scroll', ControlNavbarScroll);
+            window.removeEventListener('resize', onWindowResize);
         };
     });
     
@@ -87,7 +106,6 @@ function Navbar()
         <div className='Navbar' id='Navbar'>
             <div className='navbar-container' id='NavbarContainer'>
                 <div className='Navbar-left'>
-                    <img src={logo} alt='logo' />
                     <p>MARCO BOSSLE VILLANOVA</p>
                 </div>
                 <div className='Navbar-right'>
@@ -113,10 +131,11 @@ function Navbar()
                     <button onClick={(e) => GoToSection('AboutSection', e)}>ABOUT</button>
                     <button onClick={(e) => GoToSection('ProjectsSection', e)}>PROJECTS</button>
                     <button onClick={(e) => GoToSection('ContactSection', e)}>CONTACT</button>
-                    <img src={logo} alt='logo'/>
                 </div>
                 <div className='hamburger-footer'>
-
+                    <img src={github_icon} alt='GitHub logo' role='button' onClick={() => OpenTab('https://github.com/apecuca')}/>
+                    <img src={itchio_icon} alt='Itch.io logo' role='button' onClick={() => OpenTab('https://apecuca.itch.io/')}/>
+                    <img src={instagram_icon} alt='Instagram logo' role='button' onClick={() => OpenTab('https://www.instagram.com/pac_marco/')}/>
                 </div>
             </div>
         </div>
