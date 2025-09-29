@@ -7,11 +7,11 @@
 
     overflow: hidden;
 
-    background-color: var(--c-red-dark);
+    background-color: var(--c-acai);
 }
 
 .footer > p, h3
 {
-    color: black;
+    color: white;
     font-weight: bold;
 }

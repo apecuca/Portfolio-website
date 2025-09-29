@@ -49,7 +49,7 @@
     text-align: justify;
     text-align-last: right;
 
-    background-color: var(--c-blue-light);
+    background-color: var(--c-wine);
 }
 
 .about-infobox-technologies
@@ -73,7 +73,7 @@
     width: 50em;
     height: 1.5em;
 
-    background-color: var(--c-salmon);
+    background-color: var(--c-orange);
 }
 
 .front-line-bottom
@@ -93,14 +93,14 @@
     margin: 0;
     margin-left: 4em;
 
-    outline: solid 0 var(--c-red);
+    outline: solid 0 var(--c-flamingo);
     border-radius: 100%;
     transition: 0.25s ease;
 }
 
 .about-container > img:hover
 {
-    outline: solid 0.5em var(--c-red);
+    outline: solid 0.5em var(--c-flamingo);
 }
 
 .about-infobox p, h1

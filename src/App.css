@@ -6,6 +6,13 @@
   --c-salmon: rgb(255, 126, 112);
   --c-red-dark: rgb(121, 18, 16);
   --c-gray-light: rgb(152, 164, 176);
+
+  --c-acai: #450a3f;
+  --c-wine: #610539;
+  --c-flamingo: #e83b35;
+  --c-orange: #ff8606;
+  --c-light-orange: #ffc180;
+  --c-yellow: #fffe01;
 }
 
 .appBody
